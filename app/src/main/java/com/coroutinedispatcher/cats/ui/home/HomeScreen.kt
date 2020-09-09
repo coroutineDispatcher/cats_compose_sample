@@ -1,4 +1,4 @@
-package com.coroutinedispatcher.cats
+package com.coroutinedispatcher.cats.ui.home
 
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.*
@@ -16,6 +16,9 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.viewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.coroutinedispatcher.cats.NavigationViewModel
+import com.coroutinedispatcher.cats.NetworkClient
+import com.coroutinedispatcher.cats.ui.home.HomeViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 @ExperimentalCoroutinesApi

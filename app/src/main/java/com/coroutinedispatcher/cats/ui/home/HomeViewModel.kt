@@ -1,7 +1,8 @@
-package com.coroutinedispatcher.cats
+package com.coroutinedispatcher.cats.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.coroutinedispatcher.cats.NetworkClient
 import com.coroutinedispatcher.cats.model.Breed
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers

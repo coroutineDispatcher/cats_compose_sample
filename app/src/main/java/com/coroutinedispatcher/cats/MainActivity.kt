@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.platform.setContent
 import com.coroutinedispatcher.cats.ui.CatsTheme
+import com.coroutinedispatcher.cats.ui.home.HomeScreen
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 @ExperimentalCoroutinesApi
