@@ -2,7 +2,6 @@ package com.coroutinedispatcher.cats
 
 import com.coroutinedispatcher.cats.model.Breed
 import retrofit2.http.GET
-import retrofit2.http.Header
 import retrofit2.http.Query
 
 interface NetworkClient {

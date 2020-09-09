@@ -1,7 +1,11 @@
 package com.coroutinedispatcher.cats.ui.home
 
 import androidx.compose.foundation.Text
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumnFor
 import androidx.compose.material.Card
 import androidx.compose.material.CircularProgressIndicator
@@ -18,7 +22,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.coroutinedispatcher.cats.NavigationViewModel
 import com.coroutinedispatcher.cats.NetworkClient
-import com.coroutinedispatcher.cats.ui.home.HomeViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 @ExperimentalCoroutinesApi
