@@ -1,5 +1,6 @@
 package com.coroutinedispatcher.cats.model
 
+import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 data class Breed(
@@ -8,5 +9,7 @@ data class Breed(
     @SerializedName("name")
     val name: String,
     @SerializedName("description")
-    val description: String
+    val description: String,
+    @Expose(serialize = false)
+    var imageUrl: String = ""
 )
