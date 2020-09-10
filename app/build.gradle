@@ -59,4 +59,5 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
     implementation "androidx.fragment:fragment-ktx:1.2.5"
     implementation "androidx.compose.runtime:runtime-livedata:1.0.0-alpha02"
+    implementation "dev.chrisbanes.accompanist:accompanist-coil:0.2.1"
 }
