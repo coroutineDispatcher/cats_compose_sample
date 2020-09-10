@@ -17,6 +17,7 @@ class HomeViewModel(private val networkClient: NetworkClient) : ViewModel() {
     val state: StateFlow<State> = _state
 
     private val postsExceptionHandler = CoroutineExceptionHandler { _, throwable ->
+        throwable.printStackTrace()
         _state.value = State.Error(throwable.message)
     }
 
@@ -27,11 +28,17 @@ class HomeViewModel(private val networkClient: NetworkClient) : ViewModel() {
         data class Error(val errorMessage: String?) : State()
     }
 
-    fun getPosts() {
-        _state.value = State.Loading
+    fun getCatBreeds() {
         viewModelScope.launch(Dispatchers.IO + postsExceptionHandler) {
-            val posts = networkClient.getPosts()
-            _state.value = State.Success(posts)
+            _state.value = State.Loading
+            val breedsResponse = networkClient.fetchBreeds()
+            val breeds = breedsResponse.map { breed ->
+                val imageResponse = networkClient.fetchImage(breed.id)
+                breed.imageUrl = imageResponse[0].url
+                return@map breed
+            }
+
+            _state.value = State.Success(breeds)
         }
     }
 }
