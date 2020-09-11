@@ -10,6 +10,8 @@ data class Breed(
     val name: String,
     @SerializedName("description")
     val description: String,
+    @SerializedName("wikipedia_url")
+    val wikipediaUrl: String,
     @Expose(serialize = false)
     var imageUrl: String = ""
 )

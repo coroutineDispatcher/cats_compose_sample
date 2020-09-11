@@ -12,7 +12,7 @@ class NavigationViewModel : ViewModel() {
 
     sealed class NavigationState {
         object Home : NavigationState()
-        object ImageDetails : NavigationState()
+        data class ImageDetails(val urlToRender: String) : NavigationState()
     }
 
     fun navigateTo(state: NavigationState) {
