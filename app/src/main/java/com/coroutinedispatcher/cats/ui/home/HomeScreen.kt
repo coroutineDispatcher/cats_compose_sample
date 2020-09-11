@@ -45,7 +45,7 @@ fun HomeScreen(
             breedsList = statesValue.breedsList,
             itemClickAction = navigateTo
         )
-        is HomeViewModel.State.Error -> ErrorView { homeViewModel.getCatBreeds() }
+        is HomeViewModel.State.Error -> ErrorView(retryAction = { homeViewModel.getCatBreeds() })
     }
 }
 

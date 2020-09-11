@@ -4,9 +4,12 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.animation.Crossfade
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.Icon
 import androidx.compose.foundation.Text
-import androidx.compose.material.*
+import androidx.compose.material.IconButton
+import androidx.compose.material.Scaffold
+import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.graphics.Color
@@ -27,12 +30,10 @@ class MainActivity : AppCompatActivity() {
         val injector = (application as CatsApplication).injector
         setContent {
             CatsTheme {
-                Surface(color = MaterialTheme.colors.background) {
-                    CatsAppScafold(
-                        navigationViewModel = navigationViewModel,
-                        networkClient = injector.networkClient
-                    )
-                }
+                CatsAppScaffold(
+                    navigationViewModel = navigationViewModel,
+                    networkClient = injector.networkClient
+                )
             }
         }
     }
@@ -44,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
 @ExperimentalCoroutinesApi
 @Composable
-fun CatsAppScafold(
+fun CatsAppScaffold(
     navigationViewModel: NavigationViewModel,
     networkClient: NetworkClient
 ) {
